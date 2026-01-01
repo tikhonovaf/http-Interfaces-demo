@@ -1,0 +1,15 @@
+services:
+  pet-service:
+    url: http://localhost:${wiremock.server.port}
+  store-service:
+    url: http://localhost:${wiremock.server.port}
+
+# Эти настройки помогут нам увидеть детальную ошибку, если что-то пойдет не так
+server:
+  error:
+    include-message: always
+    include-exception: true
+
+logging:
+  level:
+    org.springframework.web.reactive.function.client.WebClient: DEBUG

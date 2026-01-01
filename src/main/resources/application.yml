@@ -1,0 +1,15 @@
+services:
+  pet-service:
+    url: http://localhost:8081
+  store-service:
+    url: http://localhost:8082
+server:
+  error:
+    include-message: always
+    include-exception: true
+# Для тестов (src/test/resources/application-test.yaml)
+# services:
+#   pet-service:
+#     url: http://localhost:${wiremock.server.port}
+#   store-service:
+#     url: http://localhost:${wiremock.server.port}
